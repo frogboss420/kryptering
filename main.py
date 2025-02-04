@@ -1,18 +1,9 @@
+import tools
 alfabet = 'abcdefghijklmnopqrstuvwxyzæøå'
 nøglealfabet = ''
 
-#tvinger brugeren til at vælge en numerisk nøgle
-def vælgnøgle():
-    active = True
-    while active:
-        out = input('selekt nøgle\n')
-        if out.isnumeric() == False:
-            print('Valgte nøgle er ikke validt! Vælg et nummer!')
-        else:
-            print('thank')
-            return int(out)
 
-nøgle = vælgnøgle()
+nøgle = tools.vælgnøgle()
 
 #main løkke
 mainloop = True
@@ -24,7 +15,7 @@ while mainloop:
     elif decision == 'DEKRYPT':
         print('yayy')
     elif decision == 'NØGLE':
-        nøgle = vælgnøgle()
+        nøgle = tools.vælgnøgle()
     elif decision == 'EXIT':
         break
     else:
