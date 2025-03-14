@@ -11,7 +11,7 @@ while mainloop:
     decision = input('ENKRYPT, DEKRYPT, vælg NØGLE eller EXIT.')
     decision = str(decision.upper())
     if decision == 'ENKRYPT':
-        print('yay')
+        tools.caesarciffer(nøgle)
     elif decision == 'DEKRYPT':
         print('yayy')
     elif decision == 'NØGLE':
