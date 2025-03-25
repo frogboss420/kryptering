@@ -4,14 +4,17 @@ nøglealfabet = ''
 
 
 nøgle = tools.vælgnøgle()
-
+nøglealfabet = tools.alfabetkonverter(alfabet, nøgle)
+caesaralfabet = dict(zip(alfabet,nøglealfabet))
+print(nøglealfabet)
+print(caesaralfabet)
 #main løkke
 mainloop = True
 while mainloop:
     decision = input('ENKRYPT, DEKRYPT, vælg NØGLE eller EXIT.')
     decision = str(decision.upper())
     if decision == 'ENKRYPT':
-        tools.caesarciffer(nøgle)
+        tools.caesarciffer(caesaralfabet)
     elif decision == 'DEKRYPT':
         print('yayy')
     elif decision == 'NØGLE':

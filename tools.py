@@ -13,16 +13,21 @@ def vælgnøgle():
 def alfabetkonverter(alfabet, nøgle):
     out = []
     for i in range(len(str(alfabet))):
+        superindeks = i + nøgle
+        if superindeks > len(alfabet)-1:
+            superindeks %= len(alfabet)
+        out.append(alfabet[superindeks])
+    return out
 
 
-def caesarciffer(nøgle):
+def caesarciffer(dictionary):
     out = []
     active = True
     while active:
         besked = input('Indtast besked til kryptering!!!!\n')
         if besked.isalpha():
             for i in range(len(besked)):
-                out.append(besked[i])
+                out.append(dictionary[besked[i]])
             print(out)
             break
         else: print('Beskeden er ikke kun bogstaver!! Prøv igen!!!')
