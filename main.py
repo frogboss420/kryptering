@@ -1,25 +1,25 @@
 import tools #Giver adgang til funktioner fra tools.py
 alfabet = 'abcdefghijklmnopqrstuvwxyzæøå'
 
-#Brugeren vælger nøgle til enkryptering ved opstart.
+#Brugeren vælger nøgle til kryptering ved opstart.
 nøgle = tools.vælgnøgle()
-nøglealfabet = tools.alfabetkonverter(alfabet, nøgle) #bruges til at definere dictionaries til enkryptering/dekryptering.
-caesaralfabet = dict(zip(alfabet,nøglealfabet)) #enkrypterings dictionary
+nøglealfabet = tools.alfabetkonverter(alfabet, nøgle) #bruges til at definere dictionaries til kryptering/dekryptering.
+caesaralfabet = dict(zip(alfabet,nøglealfabet)) #krypterings dictionary
 omvendtdict = dict(zip(nøglealfabet,alfabet)) #dekrypterings dictionary
 
 #Løkke for at tillade brugeren til at lave flere kommandoer i en session.
 mainloop = True
 while mainloop:
     #Brugeren vælger hvilken kommando de vil bruge.
-    decision = input('ENKRYPT, DEKRYPT, vælg ny NØGLE eller EXIT.\n')
+    decision = input('KRYPTER, DEKRYPTER, vælg ny NØGLE eller EXIT.\n')
     decision = str(decision.upper())
 
     #kryptering
-    if decision == 'ENKRYPT':
+    if decision == 'KRYPTER':
         tools.caesarciffer(caesaralfabet)
 
     #dekryptering
-    elif decision == 'DEKRYPT':
+    elif decision == 'DEKRYPTER':
         tools.caesarciffer(omvendtdict)
 
     #vælg ny nøgle
