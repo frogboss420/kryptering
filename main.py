@@ -1,6 +1,5 @@
 import tools #Giver adgang til funktioner fra tools.py
 alfabet = 'abcdefghijklmnopqrstuvwxyzæøå'
-nøglealfabet = ''
 
 #Brugeren vælger nøgle til enkryptering ved opstart.
 nøgle = tools.vælgnøgle()
